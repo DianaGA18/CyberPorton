@@ -1,0 +1,127 @@
+.informacion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos columnas iguales */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInImage 2s ease-in-out; /* Añade animación de entrada para la imagen */
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.image {
+  max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInText 2s ease-in-out; /* Añade animación de entrada para los textos */
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text2 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: fantasy;
+  margin-bottom: 20px; /* Espacio entre el texto principal y la sección de contacto */
+  transition: color 0.3s;
+}
+
+.contactanos-container {
+  text-align: center; /* Centra el texto y los íconos */
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center; /* Centra los íconos */
+  margin-top: 10px;
+}
+
+.icon {
+  margin: 0 10px;
+  font-size: 4rem; /* Ajusta el tamaño del icono según tus necesidades */
+  color: #000; /* Cambia el color del icono según tus necesidades */
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #007bff; /* Cambia el color al pasar el cursor sobre el icono */
+}
+
+.vm {
+  font-weight: bold;
+  font-size: 23px;
+  transition: opacity 1s ease-in-out; /* Añade transición a los textos */
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards;
+}
+
+/* Estilos generales */
+p {
+  text-align: center;
+  font-family: serif;
+  transition: opacity 1s ease-in-out; /* Añade transición a los párrafos */
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  p {
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    padding: 10px; /* Añade padding para mejorar la legibilidad */
+  }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  p {
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    padding: 15px; /* Añade padding para mejorar la legibilidad */
+  }
+}
+
+/* Estilos para pantallas grandes (desktops) */
+@media (min-width: 1025px) {
+  p {
+    font-size: 22px; /* Ajusta el tamaño de la fuente */
+    padding: 20px; /* Añade padding para mejorar la legibilidad */
+  }
+}
+
+/* Keyframes para la animación */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

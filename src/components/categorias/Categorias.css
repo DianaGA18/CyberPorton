@@ -1,0 +1,204 @@
+/* Estilos para el contenedor de productos */ 
+.fondo{
+  background-color: #f2ecec;
+}
+
+
+.productos-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los productos se envuelvan en múltiples líneas */
+}
+
+/* Estilos para cada producto */
+.producto {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%; /* Ajusta el ancho según necesites */
+  border: 1px solid #ccc; /* Borde alrededor de cada producto */
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-left: 40px;
+  margin-right: 50px;
+  margin-top: 30px;
+
+}
+
+/* Estilos para la imagen del producto */
+.imagen {
+  flex: 0 0 auto; /* La imagen no se hace flexible */
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 130px;
+  height: 120px;
+}
+
+.imagen img {
+  width: 100px; /* Tamaño de la imagen */
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Estilos para el detalle del producto */
+.detalle {
+  flex: 1; /* El detalle del producto se expande */
+}
+
+.detalle h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333; /* Color del texto */
+}
+
+.detalle p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #666; /* Color del texto */
+}
+
+/* Estilos para el precio y el botón de compra */
+.precio {
+  display: flex;
+  align-items: center;
+}
+
+.precio span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comprar-button {
+  padding: 8px 16px;
+  background-color: #3ba9e8; /* Color de fondo */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comprar-button:hover {
+  background-color: #2458a4; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para la sección de búsqueda y ordenamiento */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.search-input {
+  padding: 5px 20px;
+  font-size: 16px;
+  border: 2px solid #1E90FF; /* DodgerBlue border */
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-left: 28px;
+  color: #103042; /* Navy text */
+}
+
+.search-input::placeholder {
+  color: #1c266a; /* LightSkyBlue placeholder text */
+}
+
+.search-button {
+  padding: 4px 20px;
+  font-size: 16px;
+  background-color: #3ba9e8; /* DodgerBlue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.computo {
+  display: inline-block; /* Para asegurar que el tamaño se ajuste al contenido */
+  font-size: 50px; /* Tamaño de fuente inicial */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  animation: zoomIn 1.5s ease-out; /* Animación 'zoomIn' de 0.5 segundos */
+  margin-left: 150px;
+  font-family: fantasy; 
+  font-weight: bold; 
+}
+
+/* Para pantallas pequeñas (móviles en retrato y paisajes) */
+@media (max-width: 600px) {
+  .computo {
+    font-size: 30px; /* Ajusta el tamaño de fuente */
+    margin-left: 20px; /* Ajusta el margen */
+  }
+}
+
+/* Para tablets en retrato */
+@media (min-width: 601px) and (max-width: 768px) {
+  .computo {
+    font-size: 40px; /* Ajusta el tamaño de fuente */
+    margin-left: 50px; /* Ajusta el margen */
+  }
+}
+
+/* Para tablets en paisaje y pantallas pequeñas de laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .computo {
+    font-size: 45px; /* Ajusta el tamaño de fuente */
+    margin-left: 100px; /* Ajusta el margen */
+  }
+}
+
+/* Para pantallas más grandes (laptops y desktops) */
+@media (min-width: 1025px) {
+  .computo {
+    font-size: 50px; /* Tamaño de fuente original */
+    margin-left: 150px; /* Margen original */
+  }
+}
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8); /* Escala inicial reducida */
+  }
+  to {
+    transform: scale(1); /* Escala final normal */
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8); /* Escala inicial reducida */
+  }
+  to {
+    transform: scale(1); /* Escala final normal */
+  }
+}
+
+
+.search-button:hover {
+  background-color: #2458a4; /* RoyalBlue on hover */
+}
+
+.ordenar {
+  display: flex;
+  justify-content: flex-end; /* Alinea los elementos al final del contenedor */
+  margin-right: 100px; /* Margen derecho para separación */
+  height: 40px;
+}
+
+.dropdown-select {
+  padding: 8px;
+  font-size: 16px;
+  background-color: #3ba9e8; /* Color de fondo */
+  border: 2px solid #53d7fc; /* Color del borde */
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fffcfc; /* Color del texto */
+  font-weight: bold;
+}
+
+.dropdown-select:hover {
+  background-color: #1c79a7; /* Color de fondo al pasar el ratón */
+}
+
